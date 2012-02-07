@@ -114,6 +114,20 @@ describe Quotes do
           end
 
         end
+
+
+        describe "gibberish" do
+
+          it "should return nothing if the param is gibberish" do
+            results = subject.search(:gibberish => "dude")
+
+            results.should be_empty
+          end
+
+        end
+
+
+
       end
 
     end
